@@ -6,8 +6,12 @@ module.exports.renderRegister = (req, res) => {
 
 module.exports.register = async (req, res, next) => {
     try {
-        const {  email, username, password } = req.body;
-        const user = new User({  email, username });
+        const { email, username, password } = req.body;
+        const user = new User({ email, username });
+        if (req.file) user.image = { url: req.file.path, filename: req.file.filename };
+        else user.image = {
+          url: "https://res.cloudinary.com/dwkdt0lbo/image/upload/v1676982585/CampSite/duser_plxhxx.png", filename: "default user",
+        };
         const registeredUser = await User.register(user, password);
         req.login(registeredUser, err => {
             if (err) return next(err);

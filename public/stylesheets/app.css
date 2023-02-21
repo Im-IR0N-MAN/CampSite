@@ -1,9 +1,34 @@
 #cluster-map {
-    width: 100%;
-    height: 500px;
+  width: 100%;
+  height: 500px;
 }
 
 #map {
-    width: 100%;
-    height: 300px;
+  width: 100%;
+  height: 300px;
+}
+
+.bg-darker {
+  background-color: #252525;
+}
+
+.left-round {
+  border-radius: 25px 0px 0px 25px;
+}
+
+.top-round {
+  border-radius: 25px 25px 0px 0px;
+}
+
+.round {
+  border-radius: 25px;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.dp {
+  height: 2rem;
+  width: 2rem;
 }

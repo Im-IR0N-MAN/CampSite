@@ -23,15 +23,15 @@
             <% } %>
         </div>
 
-        <div class="card mb-3">
-            <div class="card-body">
+        <div class="card mb-3 bg-darker">
+            <div class="card-body bg-darker">
                 <h5 class="card-title"><%= campground.title%></h5>
                 <p class="card-text"><%= campground.description%></p>
             </div>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item text-muted"><%= campground.location%></li>
-                <li class="list-group-item">Submitted by <%= campground.author.username%></li>
-                <li class="list-group-item">$<%= campground.price%>/night</li>
+                <li class="list-group-item text-muted bg-darker"><%= campground.location%></li>
+                <li class="list-group-item bg-darker">Submitted by <%= campground.author.username%>&nbsp;&nbsp; <img class=" dp rounded-circle" src="<%= campground.author.image.url %>" alt=""></li>
+                <li class="list-group-item bg-darker" >$<%= campground.price%>/night</li>
             </ul>
             <%  if( currentUser && campground.author.equals(currentUser._id))  {%>
             <div class="card-body">
@@ -72,7 +72,7 @@
                 <label for="first-rate5" title="Amazing">5 stars</label>
             </fieldset>
             <div class="mb-3">
-                <label class="form-label" for="body">Review Text</label>
+                <label class="form-label " for="body">Review Text</label>
                 <textarea class="form-control" name="review[body]" id="body" cols="30" rows="3" required></textarea>
                 <div class="valid-feedback">
                     Looks good!
@@ -82,9 +82,9 @@
         </form>
         <% } %>
         <% for(let review of campground.reviews) { %>
-        <div class="card mb-3 ">
+        <div class="card mb-3 bg-darker">
             <div class="card-body">
-                <h5 class="card-title"> <%= review.author.username%></h5>
+                <h5 class="card-title"> &nbsp;&nbsp;<img class=" dp rounded-circle" src="<%= review.author.image.url %>" alt="">&nbsp;&nbsp; <%= review.author.username%></h5>
                 <p class="starability-result" data-rating="<%=review.rating%>">
                     Rated: <%= review.rating %> stars
                 </p>
