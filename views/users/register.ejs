@@ -1,14 +1,15 @@
 <% layout('layouts/boilerplate')%>
-    <div class="container d-flex justify-content-center align-items-center mt-5">
+    <div class="container d-flex justify-content-center align-items-center mt-5 pb-5 px-5">
         <div class="row">
-            <div class="col-md-6 offset-md-3 col-xl-4 offset-xl-4 round">
-                <div class="card shadow top-round">
-                    <img class="top-round" src="https://res.cloudinary.com/dwkdt0lbo/image/upload/v1676985198/CampSite/wallpapersden.com_artistic-cityscape-cool-illustration_wxl_q5abpe.jpg"
-                        alt="" class="card-img-top" />
+            <div class="col form-col ">
+            <img class="form-img left-round" src="https://res.cloudinary.com/dwkdt0lbo/image/upload/v1676985198/CampSite/wallpapersden.com_artistic-cityscape-cool-illustration_wxl_q5abpe.jpg"
+                alt="" class="card-img-top" /></div>
+            <div class="col form-col right-round">
+                <div class="card shadow bg-darker p-3 px-5 right-round">
                     <div class="card-body bg-darker ">
                         <h5 class="card-title">Register</h5>
                         <form action="/register" method="POST" class="validated-form " novalidate enctype="multipart/form-data">
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <label class="form-label" for="username">Username</label>
                                 <input class="form-control" type="text" id="username" name="username" required
                                     autofocus>
@@ -16,14 +17,14 @@
                                     Looks good!
                                 </div>
                             </div>
-                            <div class="mb-3">
+                            <div class="mb-2">
                                 <label class="form-label" for="email">Email</label>
                                 <input class="form-control" type="email" id="email" name="email" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
-                            <div class="mb-5">
+                            <div class="mb-3">
                                 <label class="form-label" for="password">Password</label>
                                 <input class="form-control" type="password" id="password" name="password" required>
                                 <div class="valid-feedback">
@@ -34,7 +35,7 @@
                                 <div class="form-file custom-file">
                                     <input type="file" class="form-file-input" id="image" name="image" >
                                     <label class="form-file-label" for="image">
-                                        <span class="form-file-text custom-file-label">Choose image...</span>
+                                        <span class="form-file-text custom-file-label">Choose Profile Photo...</span>
                                         <span class="form-file-button">Browse</span>
                                     </label>
                                 </div>

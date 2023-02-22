@@ -30,7 +30,7 @@
             </div>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item text-muted bg-darker"><%= campground.location%></li>
-                <li class="list-group-item bg-darker">Submitted by <%= campground.author.username%>&nbsp;&nbsp; <img class=" dp rounded-circle" src="<%= campground.author.image.url %>" alt=""></li>
+                <li class="list-group-item bg-darker">Submitted by <%= campground.author.username%>&nbsp;&nbsp; <a href="/showuser"><img class=" dp rounded-circle" src="<%= campground.author.image.url %>" alt=""></a></li>
                 <li class="list-group-item bg-darker" >$<%= campground.price%>/night</li>
             </ul>
             <%  if( currentUser && campground.author.equals(currentUser._id))  {%>
@@ -103,7 +103,7 @@
 
 <script>
     const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
-    const campground = <%- JSON.stringify(campground) %>
+    const campground = JSON.stringify(campground) 
 </script>
 
 <script src="/javascripts/showPageMap.js"></script>

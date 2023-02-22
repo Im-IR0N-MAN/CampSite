@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate')%>
+
+
+
+    <div class="card text-center align-items-center bg-darker">
+        <div class="card-header">
+            Featuring
+        </div>
+        <% if(currentUser.image) { %><img class=" dp-large rounded" src="<%= currentUser.image.url %>" alt="">
+            <%} else {%> <img class=" dp-large rounder"
+                    src="https://res.cloudinary.com/dwkdt0lbo/image/upload/v1676982585/CampSite/duser_plxhxx.png"
+                    alt="">
+                <% } %>
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <%=currentUser.username.toUpperCase()%>
+                        </h5>
+                        <p class="card-text">This is someone I dont know...!!!</p>
+                        <a href="/campgrounds" class="btn btn-primary">All Campgrounds</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+    </div>

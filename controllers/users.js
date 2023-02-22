@@ -35,6 +35,11 @@ module.exports.login = (req, res) => {
     res.redirect(redirectUrl);
 }
 
+module.exports.show = (req, res) => {
+    // const person
+    res.render('users/show');
+}
+
 module.exports.logout = (req, res) => {
     req.logout();
     // req.session.destroy();

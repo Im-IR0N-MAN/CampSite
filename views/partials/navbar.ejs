@@ -20,12 +20,13 @@
                         <% } %>
                     </div>
                     <% if(currentUser) {%>
+                        <a href="/showuser">
                     <span><% if(currentUser.image) { %><img class=" dp rounded-circle" src="<%= currentUser.image.url %>"
                             alt="">
                         <%} else {%> <img class=" dp rounded-circle"
                                 src="https://res.cloudinary.com/dwkdt0lbo/image/upload/v1676982585/CampSite/duser_plxhxx.png"
                                 alt="">
-                        <% } %></span>
+                        <% } %></span></a>
                         <% } %>
         </div>
     </div>

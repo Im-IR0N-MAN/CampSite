@@ -13,7 +13,10 @@
 }
 
 .left-round {
-  border-radius: 25px 0px 0px 25px;
+  border-radius: 21px 0px 0px 21px;
+}
+.right-round {
+  border-radius: 0px 21px 21px 0px;
 }
 
 .top-round {
@@ -31,4 +34,24 @@
 .dp {
   height: 2rem;
   width: 2rem;
+}
+
+.form-img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.form-col {
+    padding:0;
+    margin:0;
+}
+
+.mycard{
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+.dp-large{
+  width: 200px;
 }
